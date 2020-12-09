@@ -16,9 +16,9 @@
     <div id="app">
 
       <div class="wrapper">
-        <i class="fas fa-chevron-left"></i>
+        <i class="fas fa-chevron-left" @click="prevImg"></i>
         <img :src="images[imageIndex]" alt="">
-        <i class="fas fa-chevron-right"></i>
+        <i class="fas fa-chevron-right" @click="nextImg"></i>
       </div>
 
     </div>

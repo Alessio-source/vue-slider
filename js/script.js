@@ -8,5 +8,22 @@ var app = new Vue({
       "https://www.altraeta.it/over50/wp-content/uploads/2018/11/dolomites-2580866_1920-1024x638.jpg",
       "https://www.marathonclubtrento.com/wp/wp-content/uploads/2018/07/riva-hm-2017-0-1024x638.jpg"
     ]
+  },
+  methods: {
+    nextImg: function (){
+      this.imageIndex++;
+
+      if (this.imageIndex == this.images.length) {
+        this.imageIndex = 0;
+      }
+    },
+    prevImg: function (){
+      this.imageIndex--;
+
+      if (this.imageIndex < 0) {
+        this.imageIndex = this.images.length - 1;
+      }
+
+    }
   }
 })
