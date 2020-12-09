@@ -10,6 +10,14 @@ var app = new Vue({
     ]
   },
   methods: {
+    nextClick: function (){
+      clearInterval(this.interval);
+      this.nextImg();
+    },
+    prevClick: function (){
+      clearInterval(this.interval);
+      this.prevImg();
+    },
     nextImg: function (){
       this.imageIndex++;
 
@@ -25,5 +33,8 @@ var app = new Vue({
       }
 
     }
-  }
+  },
+  created () {
+    this.interval = setInterval(this.nextImg, 3000)
+  },
 })
